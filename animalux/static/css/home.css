@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --pink: #dc267f;
+  --ambar: #ffb800;
+  --preto: #0a0a0a;
+  --purpura: #2d1b69;
+  --grafite:#1a1a1a;
+  --pink_intenso:#b91c7c;
+  --dourado: #e6ac00;
+  --vidro: rgba(255,255,255,0.1);
+
+  --fonte-texto: "Lora";
+  --fonte-menu: "Poppins";
+  --fonte-titulo: "Poiret One"
+}
+
+#login
+{
+    color: white;
+}

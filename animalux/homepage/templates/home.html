@@ -1,0 +1,61 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title> Cinema AnimaLux </title>
+		<meta charset="utf-8">
+		<meta name="description" content="Site do Cinema Anima Lux">
+		<meta name="autor" content="Natan Mauricio Santos">
+		<meta name="keywords" content="Python, Css, Html, Javascript">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+		<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+	</head>
+	
+	<body>
+		<header id="topo">
+           <img id="logo" src="https://drive.google.com/uc?export=view&id=1U-cBDVxWEW6v3KG4LcKqH-Phv8K6DTfp" alt="Logo AnimaLux" />
+
+
+">
+            <nav id = "menu_topo">
+                <ul>
+                    <li><a class="opcoes" href="#sobre">Sobre</a></li>
+                    <li><a class="opcoes" href="#filme_cartaz">Filmes em cartaz</a></li>
+					<li><a class="opcoes" href="#lancamento">Próximos lançamentos</a></li>
+                </ul>
+            </nav>
+        </header>
+		<main id = "corpo_principal">
+			<header id="login"><a  href="#">Login</a></header>
+			<main>
+				<article id = "sobre">
+					<h2>Bem-vindo ao AnimaLux – Onde o Clássico Encontra o Inesquecível</h2>
+					<p>
+						O AnimaLux é mais do que um cinema — é uma viagem no tempo. 
+						Inspirado no charme e no requinte dos cinemas dos anos 1950, oferecemos uma experiência única 
+						que combina elegância retrô com o que há de mais moderno em som e imagem. Com três salas equipadas
+						com tecnologia de ponta e uma atmosfera cuidadosamente pensada para encantar, cada sessão é
+						um espetáculo à parte. Venha viver o cinema como ele sempre deveria ter sido: luxuoso, envolvente e memorável.
+					</p>
+				</article>
+
+				<article id = "filme_cartaz">
+					<h2>Filmes em cartaz</h2>
+					<p> xxxxxxxxxxxxxxxxx</p>
+				</article>
+
+				<article id = "lancamentos">
+					<h2>Próximos lançamentos</h2>
+					<p> xxxxxxxxxxxxxxxxx</p>
+				</article>
+
+			</main>
+		</main>
+		<footer id = "fim">
+			<div> Desenvolvido por Natan Mauricio Santos - 2025</div>
+		</footer>
+	</body>
+</html>
