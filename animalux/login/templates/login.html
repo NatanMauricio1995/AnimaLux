@@ -1,0 +1,61 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title> Cinema AnimaLux </title>
+		<meta charset="utf-8">
+		<meta name="description" content="Site do Cinema Anima Lux">
+		<meta name="autor" content="Natan Mauricio Santos">
+		<meta name="keywords" content="Python, Css, Html, Javascript">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+		<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+	</head>
+	
+    <body>
+        <header id="topo">
+            <img id="logo" src="https://i.imgur.com/XsEchDu.png" alt="Logo AnimaLux">
+            <nav id="menu_topo">
+                <a class="opcoes" href="{% url 'home' %}">Voltar</a>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <form>
+                    <input
+                        class = "entrada"
+                        type = "text" 
+                        maxlenght = "255" 
+                        minlenght = "5"
+                        placeholder = "E-mail"
+                        required
+                    >
+
+                    <input
+                        class = "entrada"
+                        type = "password"
+                        maxlenght = "255"
+                        placeholder = "Senha"
+                        required
+                    >
+
+                    <input
+                        id = "entrar"
+                        type = "submit"
+                        value = "Entrar"
+                    >
+                </form>
+                <div>
+                    <a id="esqueci" href = "#"> Esqueceu a senha? </a>
+                    <a id="novo" href = "#">Criar nova conta</a>
+                </div>
+            </article>
+        </main>
+
+        <footer id="fim">
+            <div>Desenvolvido por Natan Mauricio Santos - 2025</div>
+        </footer>
+    </body>
+</html>

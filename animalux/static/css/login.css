@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --pink: #dc267f;
+  --ambar: #ffb800;
+  --preto: #0a0a0a;
+  --purpura: #2d1b69;
+  --grafite:#1a1a1a;
+  --pink_intenso:#b91c7c;
+  --dourado: rgb(230, 172, 0);
+  --vidro: rgba(255,255,255,0.1);
+
+  --fonte-texto: "Lora";
+  --fonte-menu: "Poppins";
+  --fonte-titulo: "Poiret One"
+}
+
+article
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+input
+{
+    height: 40px;
+    width: 400px;
+    font-size: 1.2em;
+    font-family: var(--fonte-menu);
+    border-radius: 5px;
+    border-color: var(--vidro);
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.entrada:focus
+{
+    border-color: var(--ambar);
+    box-shadow: 0 8px 25px rgba(220, 38, 127, 0.5);
+}
+
+#entrar
+{
+    background-color: var(--preto);
+    color: var(--ambar);
+    
+}
+
+#entrar:hover
+{
+    border-color: var(--preto);
+    background-color: var(--ambar);
+    color:var(--preto);
+    font-weight: 500;
+    height: 45px;
+    width: 405px;
+    transition: all 0.5s ease;
+}
+
+div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#esqueci
+{
+    color : var(--pink);
+    text-decoration: none;
+    font-variant: normal;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+#esqueci:hover
+{
+    text-decoration: underline;
+    
+}
+
+#novo
+{
+    color: var(--dourado);
+    background-color: #2d1b69;
+    font-family: var(--fonte-menu);
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+#novo:hover
+{
+    box-shadow: 0 8px 25px rgba(230, 172, 0, 0.5);
+    transition: all 0.5s ease;
+}
