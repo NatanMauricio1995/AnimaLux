@@ -14,48 +14,133 @@
 
 	</head>
 	
-	<body>
-		<header id="topo">
-           <img id="logo" src="https://drive.google.com/uc?export=view&id=1U-cBDVxWEW6v3KG4LcKqH-Phv8K6DTfp" alt="Logo AnimaLux" />
+<body>
+    <header id="topo">
+        <img id="logo" src="https://i.imgur.com/XsEchDu.png" alt="Logo AnimaLux">
+        <nav id="menu_topo">
+            <ul>
+                <li><a class="opcoes" href="#sobre">Sobre</a></li>
+                <li><a class="opcoes" href="#filme_cartaz">Filmes em cartaz</a></li>
+                <li><a class="opcoes" href="#lancamentos">Próximos lançamentos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-">
-            <nav id = "menu_topo">
-                <ul>
-                    <li><a class="opcoes" href="#sobre">Sobre</a></li>
-                    <li><a class="opcoes" href="#filme_cartaz">Filmes em cartaz</a></li>
-					<li><a class="opcoes" href="#lancamento">Próximos lançamentos</a></li>
-                </ul>
-            </nav>
+    <main id="corpo_principal">
+        <header id="cabecalho">
+            <a id="login" href="#">Login</a>
         </header>
-		<main id = "corpo_principal">
-			<header id="login"><a  href="#">Login</a></header>
-			<main>
-				<article id = "sobre">
-					<h2>Bem-vindo ao AnimaLux – Onde o Clássico Encontra o Inesquecível</h2>
-					<p>
-						O AnimaLux é mais do que um cinema — é uma viagem no tempo. 
-						Inspirado no charme e no requinte dos cinemas dos anos 1950, oferecemos uma experiência única 
-						que combina elegância retrô com o que há de mais moderno em som e imagem. Com três salas equipadas
-						com tecnologia de ponta e uma atmosfera cuidadosamente pensada para encantar, cada sessão é
-						um espetáculo à parte. Venha viver o cinema como ele sempre deveria ter sido: luxuoso, envolvente e memorável.
-					</p>
-				</article>
+        
+        <main>
+            <article id="sobre">
+                <h2>Bem-vindo ao AnimaLux</h2>
+                <p>
+                    O AnimaLux é mais do que um cinema — é uma viagem no tempo. 
+                    Inspirado no charme e no requinte dos cinemas dos anos 1950, oferecemos uma experiência única 
+                    que combina elegância retrô com o que há de mais moderno em som e imagem. Com três salas equipadas
+                    com tecnologia de ponta e uma atmosfera cuidadosamente pensada para encantar, cada sessão é
+                    um espetáculo à parte.
+                </p>
+                <p>
+                    Venha viver o cinema como ele sempre deveria ter sido: luxuoso, envolvente e memorável.
+                    Nossa paixão pelo cinema clássico e pela inovação tecnológica cria uma experiência cinematográfica
+                    verdadeiramente única, onde cada detalhe foi pensado para seu conforto e prazer.
+                </p>
+            </article>
 
-				<article id = "filme_cartaz">
-					<h2>Filmes em cartaz</h2>
-					<p> xxxxxxxxxxxxxxxxx</p>
-				</article>
+            <article id="filme_cartaz">
+                <h2>Filmes em cartaz</h2>
+                <p>Confira nossa seleção especial de filmes em exibição, cuidadosamente escolhidos para proporcionar as melhores experiências cinematográficas.</p>
+                
+                <div class="carrossel-container">
+                    <button class="carrossel-btn prev" onclick="moverCarrossel('cartaz', -1)">‹</button>
+                    <div class="carrossel-wrapper" id="carrossel-cartaz">
+                        <div class="filme-card">
+                            <div class="filme-poster">Poster do Filme</div>
+                            <div class="filme-titulo">Duna: Parte Dois</div>
+                            <div class="filme-info">Ficção Científica • 166 min<br>Sessões: 14h, 17h, 20h</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Poster do Filme</div>
+                            <div class="filme-titulo">Oppenheimer</div>
+                            <div class="filme-info">Drama Histórico • 180 min<br>Sessões: 13h, 16h30, 20h</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Poster do Filme</div>
+                            <div class="filme-titulo">Barbie</div>
+                            <div class="filme-info">Comédia • 114 min<br>Sessões: 15h, 18h, 21h</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Poster do Filme</div>
+                            <div class="filme-titulo">John Wick 4</div>
+                            <div class="filme-info">Ação • 169 min<br>Sessões: 16h, 19h, 22h</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Poster do Filme</div>
+                            <div class="filme-titulo">Avatar: O Caminho da Água</div>
+                            <div class="filme-info">Aventura • 192 min<br>Sessões: 13h, 17h, 21h</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Poster do Filme</div>
+                            <div class="filme-titulo">Top Gun: Maverick</div>
+                            <div class="filme-info">Ação • 130 min<br>Sessões: 15h, 18h, 21h</div>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn next" onclick="moverCarrossel('cartaz', 1)">›</button>
+                </div>
+                <div class="carrossel-indicadores" id="indicadores-cartaz"></div>
+            </article>
 
-				<article id = "lancamentos">
-					<h2>Próximos lançamentos</h2>
-					<p> xxxxxxxxxxxxxxxxx</p>
-				</article>
+            <article id="lancamentos">
+                <h2>Próximos lançamentos</h2>
+                <p>Fique por dentro dos próximos sucessos que chegarão ao AnimaLux. Reserve já sua sessão e seja um dos primeiros a assistir!</p>
+                
+                <div class="carrossel-container">
+                    <button class="carrossel-btn prev" onclick="moverCarrossel('lancamentos', -1)">‹</button>
+                    <div class="carrossel-wrapper" id="carrossel-lancamentos">
+                        <div class="filme-card">
+                            <div class="filme-poster">Em Breve</div>
+                            <div class="filme-titulo">Guardians of the Galaxy Vol. 3</div>
+                            <div class="filme-info">Ação/Aventura<br>Estreia: 15 de Agosto</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Em Breve</div>
+                            <div class="filme-titulo">Indiana Jones 5</div>
+                            <div class="filme-info">Aventura<br>Estreia: 22 de Agosto</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Em Breve</div>
+                            <div class="filme-titulo">The Flash</div>
+                            <div class="filme-info">Super-herói<br>Estreia: 29 de Agosto</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Em Breve</div>
+                            <div class="filme-titulo">Spider-Man: Across the Spider-Verse</div>
+                            <div class="filme-info">Animação<br>Estreia: 5 de Setembro</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Em Breve</div>
+                            <div class="filme-titulo">Transformers: Rise of the Beasts</div>
+                            <div class="filme-info">Ação/Ficção<br>Estreia: 12 de Setembro</div>
+                        </div>
+                        <div class="filme-card">
+                            <div class="filme-poster">Em Breve</div>
+                            <div class="filme-titulo">Fast X</div>
+                            <div class="filme-info">Ação<br>Estreia: 19 de Setembro</div>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn next" onclick="moverCarrossel('lancamentos', 1)">›</button>
+                </div>
+                <div class="carrossel-indicadores" id="indicadores-lancamentos"></div>
+            </article>
+        </main>
+    </main>
 
-			</main>
-		</main>
-		<footer id = "fim">
-			<div> Desenvolvido por Natan Mauricio Santos - 2025</div>
-		</footer>
-	</body>
+    <footer id="fim">
+        <div>Desenvolvido por Natan Mauricio Santos - 2025</div>
+        <div style="margin-top: 10px; font-size: 12px; opacity: 0.7;">
+            Cinema AnimaLux • Onde o clássico encontra o inesquecível
+        </div>
+    </footer>
+</body>
 </html>

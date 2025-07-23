@@ -16,7 +16,183 @@
   --fonte-titulo: "Poiret One"
 }
 
-#login
-{
+/* ===== ESTILOS ESPECÍFICOS DA HOME ===== */
+
+/* ===== SEÇÕES ESPECÍFICAS ===== */
+#sobre {
+    background: linear-gradient(135deg, var(--vidro), rgba(45, 27, 105, 0.2));
+}
+
+#filme_cartaz {
+    background: linear-gradient(135deg, rgba(220, 38, 127, 0.1), var(--vidro));
+}
+
+#lancamentos {
+    background: linear-gradient(135deg, rgba(255, 184, 0, 0.1), var(--vidro));
+}
+
+/* ===== CARROSSEL DE FILMES ===== */
+.carrossel-container {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 15px;
+    padding: 20px 0;
+}
+
+.carrossel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.filme-card {
+    background: linear-gradient(135deg, var(--grafite), var(--preto));
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 184, 0, 0.2);
+    min-width: 280px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.filme-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 184, 0, 0.4);
+    border-color: var(--ambar);
+}
+
+.filme-poster {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(45deg, var(--grafite), var(--purpura));
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ambar);
+    font-size: 1.2em;
+    font-family: var(--fonte-titulo);
+}
+
+.filme-titulo {
+    font-family: var(--fonte-menu);
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--ambar);
+}
+
+.filme-info {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== CONTROLES DO CARROSSEL ===== */
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, var(--pink), var(--dourado));
     color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 127, 0.3);
+}
+
+.carrossel-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(220, 38, 127, 0.5);
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+/* ===== INDICADORES DO CARROSSEL ===== */
+.carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicador.ativo {
+    background: var(--ambar);
+    box-shadow: 0 0 10px rgba(255, 184, 0, 0.5);
+}
+
+/* ===== RESPONSIVIDADE ESPECÍFICA DA HOME ===== */
+@media (max-width: 768px) {
+    .carrossel-container {
+        padding: 10px 0;
+    }
+
+    .carrossel-wrapper {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .filme-card {
+        min-width: 250px;
+    }
+
+    .carrossel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .filme-poster {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filme-card {
+        min-width: 220px;
+        padding: 15px;
+    }
+
+    .filme-poster {
+        height: 200px;
+        font-size: 1em;
+    }
+
+    .carrossel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .carrossel-btn.prev {
+        left: 5px;
+    }
+
+    .carrossel-btn.next {
+        right: 5px;
+    }
 }
